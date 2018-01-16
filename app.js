@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
+var athletes = require('./routes/users');
+var food = require('./routes/food');
 
 var mongoose =  require('./db/mongoose');
 
@@ -22,10 +24,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// GET static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+//app.use('/users', users);
+app.use('/athletes', athletes);
+app.use('/food', food);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

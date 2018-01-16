@@ -1,0 +1,11 @@
+{% extends "/global/main.twig" %}
+
+{% block head %}
+  {{ parent() }}
+{% endblock %}
+
+{% block title %} Athlete informations {% endblock %}
+
+{% block content %}
+  <h1>Athlete number {{ athleteId }}</h1>
+{% endblock %}

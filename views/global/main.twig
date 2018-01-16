@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+  {% block head %}
+    <link rel="stylesheet" href="/stylesheets/global.css" />
+    <title>{% block title %}{% endblock %} - Feat</title>
+  {% endblock %}
+</head>
+<body>
+  <div id="content">{% block content %}{% endblock %}</div>
+  <div id="footer">
+    {% block footer %}
+      &copy; Copyright 2018 .
+    {% endblock %}
+  </div>
+</body>
+</html>

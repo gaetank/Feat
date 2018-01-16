@@ -5,7 +5,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index.twig', { title: 'Express', message: 'Hello World !' });
+  res.render('global/index.twig', { title: 'Express', message: 'Hello World !' });
+});
+
+/* GET the registration page. */
+router.get('/registration', function(req, res, next) {
+  res.render('global/registration.twig');
+});
+
+/* GET the connection page. */
+router.get('/connection', function(req, res, next) {
+  res.render('global/connection.twig');
 });
 
 module.exports = router;
