@@ -8,8 +8,12 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET a particular food */
-router.get('/:id', function(req, res, next) {
-  res.render('food/food.twig', { foodId: req.params.id });
+router.get('/reciepe/:id', function(req, res, next) {
+  res.render('food/reciepe.twig', { reciepe_id: req.params.id });
+});
+
+router.get('/dish/:id', function(req, res, next) {
+  res.render('food/dish.twig', { dish_id: req.params.id });
 });
 
 module.exports = router;

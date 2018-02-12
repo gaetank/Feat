@@ -14,8 +14,12 @@ router.get('/registration', function(req, res, next) {
 });
 
 /* GET the connection page. */
-router.get('/connection', function(req, res, next) {
-  res.render('global/connection.twig');
+router.get('/login', function(req, res, next) {
+  res.render('global/login.twig');
+});
+
+router.get('/logout', function(req, res, next) {
+  res.render('global/login.twig');
 });
 
 module.exports = router;
